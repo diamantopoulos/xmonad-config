@@ -69,7 +69,7 @@ myWorkspaces = ["1:term","2:web","3:code","4:vm","5:media"] ++ map show [6..9]
 --
 myManageHook = composeAll
     [ className =? "Chromium"       --> doShift "2:web"
-    , className =? "Google-chrome"  --> doShift "2:web"
+--  , className =? "Firefox"        --> doShift "2:web"
     , resource  =? "desktop_window" --> doIgnore
     , className =? "Galculator"     --> doFloat
     , className =? "Steam"          --> doFloat
@@ -157,6 +157,14 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((modMask, xK_p),
      spawn myLauncher)
 
+  -- Spawn firefox.
+  , ((modMask, xK_f),
+    spawn "firefox")
+
+  -- Spawn nemo.
+  , ((modMask, xK_n),
+    spawn "nemo")
+
   -- Take a selective screenshot using the command specified by mySelectScreenshot.
   , ((modMask .|. shiftMask, xK_p),
      spawn mySelectScreenshot)
@@ -222,8 +230,8 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
      setLayout $ XMonad.layoutHook conf)
 
   -- Resize viewed windows to the correct size.
-  , ((modMask, xK_n),
-     refresh)
+  --, ((modMask, xK_n),
+  --   refresh)
 
   -- Move focus to the next window.
   , ((modMask, xK_Tab),
