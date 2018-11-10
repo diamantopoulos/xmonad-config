@@ -27,7 +27,10 @@ gnome-terminal &
 gnome-terminal &
 
 # Start a browser
-google-chrome &
+firefox &
+
+# start Synergy
+synergys -c ~/.synergy.conf &
 
 # Start screensaver
 killall gnome-screensaver &
@@ -36,4 +39,4 @@ xscreensaver -no-splash &
 # Start sound server
 pulseaudio --start --log-target=syslog &
 
-exec ck-launch-session dbus-launch --sh-syntax --exit-with-session xmonad
+exec xmonad
