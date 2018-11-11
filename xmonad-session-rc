@@ -22,6 +22,9 @@ feh --bg-fill ~/.wallpaper.jpg &
 # Start the system tray
 stalonetray -c ~/.xmonad/stalonetrayrc-single &
 
+# Start nm-applet
+nm-applet &
+
 # Start two terminals
 gnome-terminal &
 gnome-terminal &

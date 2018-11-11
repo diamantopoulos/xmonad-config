@@ -30,7 +30,6 @@ Config {
         Run Swap ["-t","Swap: <usedratio>%","-H","1024","-L","512","-h","#FFB6B0","-l","#CEFFAC","-n","#FFFFCC"] 10,
         Run Network "enp2s0" ["-t","Net: <rx>, <tx>","-H","200","-L","10","-h","#FFB6B0","-l","#CEFFAC","-n","#FFFFCC"] 10,
         Run Date "%a %b %_d %l:%M:%S" "date" 10,
-        --Run Com "getMasterVolume" [] "volumelevel" 10,
         Run Com "/home/did/.xmonad/get-volume.sh" [] "volumelevel" 10,
         Run StdinReader
     ],
